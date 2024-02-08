@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <RouterView />
+   <h1>This will the home page</h1>
 </template>
