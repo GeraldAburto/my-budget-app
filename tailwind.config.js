@@ -47,6 +47,12 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      gridTemplateColumns: {
+        'main-layout': '16.25rem 1fr',
+      },
+      gridTemplateRows: {
+        'main-layout': '3.5rem 1fr',
+      },
     },
   },
   plugins: [],
