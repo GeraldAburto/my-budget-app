@@ -51,7 +51,6 @@ export default {
         'main-layout': '16.25rem 1fr',
       },
       gridTemplateRows: {
-        'main-layout': '3.5rem 1fr',
       },
     },
   },

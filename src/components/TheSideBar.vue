@@ -12,7 +12,7 @@ const budgets = ref<Budget[]>()
 onMounted(async () => {
     const { data } = await supabase
         .from('budgets')
-        .select('id, name')
+        .select('id, name, createdAt:created_at')
         .order('created_at')
 
     budgets.value = data as Budget[]

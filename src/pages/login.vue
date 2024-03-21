@@ -21,10 +21,14 @@
                     </div>
                 </form>
             </AppCardContent>
-            <AppCardFooter>
+            <AppCardFooter class="flex flex-col items-start gap-y-3">
                 <AppButton type="submit" form="login">
                     Entrar
                 </AppButton>
+                <AppSeparator />
+                <p class="text-sm text-muted-foreground">No tienes una cuenta? <RouterLink to="/sign-up">
+                        Reg&iacute;strate</RouterLink>
+                </p>
             </AppCardFooter>
         </AppCard>
     </section>
@@ -39,6 +43,7 @@ import { supabase } from '../lib/supabase-client'
 import AppButton from '../components/ui/AppButton.vue'
 import AppLabel from '../components/ui/AppLabel.vue'
 import AppInput from '../components/ui/AppInput.vue'
+import AppSeparator from '../components/ui/AppSeparator.vue'
 
 const router = useRouter()
 
@@ -54,4 +59,3 @@ async function login() {
     if (!error) router.push({ name: '/' })
 }
 </script>
-../lib/supabase
