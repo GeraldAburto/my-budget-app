@@ -30,7 +30,7 @@
                     Entrar
                 </AppButton>
                 <AppSeparator />
-                <p class="text-sm text-muted-foreground">Ya tienes una cuenta? <RouterLink to="/login">
+                <p class="text-sm text-muted-foreground">Ya tienes una cuenta? <RouterLink to="/sign-in">
                         Inicia sesi&oacute;n</RouterLink>
                 </p>
             </AppCardFooter>
@@ -63,6 +63,6 @@ async function signUp() {
         password: password.value
     })
 
-    if (!error) router.push({ name: '/login' })
+    if (!error) router.push({ name: '/sign-in' })
 }
 </script>
