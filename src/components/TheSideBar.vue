@@ -5,14 +5,14 @@ import { KanbanSquare, ArchiveX, MoreHorizontal } from 'lucide-vue-next'
 import { User } from '@supabase/supabase-js'
 
 import AppButton from './ui/AppButton.vue'
-import { supabase } from '../lib/supabase-client';
+import { supabase } from '../lib/supabase-client'
 
 const budgets = ref<Budget[]>()
 
 onMounted(async () => {
     const { data } = await supabase
         .from('budgets')
-        .select('id, name, createdAt:created_at')
+        .select('id, name, description, createdAt:created_at')
         .order('created_at')
 
     budgets.value = data as Budget[]
@@ -27,7 +27,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="h-full px-3 bg-gray-100 grid grid-rows-[1fr_2rem] overflow-y-hidden">
+    <div class="h-full px-3 bg-gray-100 grid grid-rows-[1fr_2rem] overflow-y-hidden border-r">
         <nav class="flex flex-col">
             <div class="pt-3.5 sticky">
                 <AppButton class="w-full">
